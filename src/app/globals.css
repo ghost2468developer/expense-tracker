@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background: #0b1020;
+}
+
+.aurora {
+  background:
+    radial-gradient(60rem 40rem at 10% -10%, #10b98138, #0000 60%),
+    radial-gradient(50rem 35rem at 90% 0, #38bdf82e, #0000 60%),
+    radial-gradient(40rem 30rem at 50% 110%, #a855f729, #0000 60%);
+}
+
+.glass {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background: #ffffff0a;
+  border: 1px solid #ffffff17;
+}
+
+@keyframes riseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: 0.4s both riseIn;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert();
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff24;
+  border-radius: 999px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
